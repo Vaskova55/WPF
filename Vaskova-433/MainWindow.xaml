@@ -7,11 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <Style x:Key="TextStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="25"/>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="30"/>
             <Setter Property="Foreground" Value="Green"/>
+            <Setter Property="Margin" Value="5"/>
         </Style>
-               
+
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -23,31 +24,17 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal"
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal"
                     VerticalAlignment="Center" HorizontalAlignment="Center">
             <Image Width="100" Height="100" Source="/Resources/logo_full_color.png" />
-            <TextBlock VerticalAlignment="Center" FontSize="50" Text="Text"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Style="{StaticResource TextStyle}" Text="Text"/>
-            <TextBlock Style="{StaticResource TextStyle}" Text="Text"/>
-            <TextBlock Style="{StaticResource TextStyle}" Text="Text"/>
-            <TextBlock Style="{StaticResource TextStyle}" Text="Text"/>
-            <TextBlock Style="{StaticResource TextStyle}" Text="Text"/>
-            <TextBlock Style="{StaticResource TextStyle}" Text="Text"/>
+            <Button Style="{StaticResource ButtonStyle}" x:Name="Bt_Home" Content="Home" Click="Bt_Home_Click"/>
+            <Button Style="{StaticResource ButtonStyle}" x:Name="Bt_Users" Content="Users" Click="Bt_Users_Click"/>
         </StackPanel>
-        <DataGrid Grid.Row="1" Grid.Column="1" x:Name="LaLaLa" AutoGenerateColumns="False" IsReadOnly="True">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Дата" Binding="{Binding date}" Width="68"/>
-                <DataGridTextColumn Header="Класс" Binding="{Binding classTrainess}" Width="50"/>
-                <DataGridTextColumn Header="Фамилия" Binding="{Binding firstName}"/>
-                <DataGridTextColumn Header="Имя" Binding="{Binding lastName}"/>
-                <DataGridTextColumn Header="Отчество" Binding="{Binding middleName}"/>
-                <DataGridTextColumn Header="Запрос" Binding="{Binding inquiry}"/>
-                <DataGridTextColumn Header="Статус выполнения" Binding="{Binding status}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Text="Удачной работы!"/>
         <TextBlock Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                  FontSize="25" Text="TextTextTextTextTextTextTextTextTextTextText"/>
+                  FontSize="25" Text="А здесь будет очень много текста! Когда-нибудь..."/>
+        <Frame Grid.Row="1" Grid.Column="1" x:Name="FrNav" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

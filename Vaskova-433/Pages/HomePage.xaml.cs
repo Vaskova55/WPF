@@ -1,5 +1,4 @@
 ﻿using System;
-
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,30 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Vaskova_433.Classes;
-using Vaskova_433.Pages;
 
-namespace Vaskova_433
+namespace Vaskova_433.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for HomePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HomePage : Page
     {
-        public MainWindow()
+        public HomePage()
         {
             InitializeComponent();
-          
-            FrNav.Navigate(new HomePage());
-        }
-
-        private void Bt_Home_Click(object sender, RoutedEventArgs e)
-        {
-            FrNav.Navigate(new HomePage());
-        }
-
-        private void Bt_Users_Click(object sender, RoutedEventArgs e)
-        {
-            FrNav.Navigate(new UsersPage());
+            LaLaLa.ItemsSource = APIClass.Vivod();
         }
     }
 }

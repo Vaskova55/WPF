@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Vaskova_433"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <BitmapImage x:Key="picture" UriSource="/Resources/picture.png"/>
     </Application.Resources>
 </Application>
