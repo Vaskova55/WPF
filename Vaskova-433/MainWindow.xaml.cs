@@ -39,5 +39,10 @@ namespace Vaskova_433
         {
             FrNav.Navigate(new UsersPage());
         }
+
+        private void Bt_UserList_Click(object sender, RoutedEventArgs e)
+        {
+            FrNav.Navigate(new ListPage());
+        }
     }
 }

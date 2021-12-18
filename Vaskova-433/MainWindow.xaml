@@ -29,8 +29,9 @@
             <Image Width="100" Height="100" Source="/Resources/logo_full_color.png" />
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Style="{StaticResource ButtonStyle}" x:Name="Bt_Home" Content="Home" Click="Bt_Home_Click"/>
-            <Button Style="{StaticResource ButtonStyle}" x:Name="Bt_Users" Content="Users" Click="Bt_Users_Click"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Home" Click="Bt_Home_Click"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Users" Click="Bt_Users_Click"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="List" Click="Bt_UserList_Click"/>
         </StackPanel>
         <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Text="Удачной работы!"/>
         <TextBlock Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
