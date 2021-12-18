@@ -21,28 +21,30 @@
     </Page.Resources>
 
     <Grid>
-        <ListView x:Name="LV_Users" ScrollViewer.HorizontalScrollBarVisibility="Disabled">  
+        <ListView x:Name="LV_Users" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black"  BorderThickness="1" CornerRadius="25">
                         <Grid Width="180" Height="180" Margin="10">
                             <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="20"/>
-                        </Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
 
-                        <Image Source="{Binding userPhoto, TargetNullValue={StaticResource picture}}"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center">
-                            <TextBlock.Text>
-                                <MultiBinding StringFormat="{} {0} {1} {2}">
-                                    <Binding Path="lastName"/>
-                                    <Binding Path="firstName"/>
-                                    <Binding Path="middleName"/>
-                                </MultiBinding>
-                            </TextBlock.Text>
-                        </TextBlock>
+                            <Image Source="{Binding userPhoto, TargetNullValue={StaticResource picture}}"/>
+                            <TextBlock Grid.Row="1" HorizontalAlignment="Center">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{} {0} {1} {2}">
+                                        <Binding Path="lastName"/>
+                                        <Binding Path="firstName"/>
+                                        <Binding Path="middleName"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
                             <TextBlock Grid.Row="2" HorizontalAlignment="Center" Text="{Binding login}"/>
+                            <Button Grid.Row="3" HorizontalAlignment="Center" Content="Пароль" Click="bt_Pass"/>
                         </Grid>
                     </Border>
                 </DataTemplate>

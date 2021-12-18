@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Vaskova_433.Classes.Entityes;
 
 namespace Vaskova_433.Pages
 {
@@ -24,6 +25,13 @@ namespace Vaskova_433.Pages
         {
             InitializeComponent();
             LV_Users.ItemsSource = EfModel.init().Users.ToList();
+        }
+
+        private void bt_Pass(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            UsersClass user = (UsersClass)button.DataContext;
+            MessageBox.Show(user.password);
         }
     }
 }
